@@ -5,13 +5,24 @@ if order set info is A or B without specifying 飯 or 意粉 or 薯菜
 it will setdefault as 飯
 """
 
+import re
+
 
 class OrderParse:
     def __init__(self, order):
-        self.order = order.split('\n')
-        for i in self.order:
-            if '+' not in i:
-                raise SyntaxError("Missing identifying notation '+' in the order list")
+        self.raw = order.split('\n')
+        self.order = self.raw[2:]
+        print(self.order)
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2} [A-Z][a-z]{2}", self.raw[0]):
+            raise SyntaxError("Header format incorrect, cannot identify date")
+        if self.raw[1] != "":
+            raise SyntaxError("Header spacing missing!")
+        for i, j in enumerate(self.order):
+            if '+' not in j:
+                raise SyntaxError(f"Missing identifying notation '+' in the order list, item no. {i + 1}")
+
+    def get_date(self):
+        return self.raw[0]
 
     def get_total(self):
         return len(self.order)

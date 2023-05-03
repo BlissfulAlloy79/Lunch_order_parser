@@ -80,8 +80,9 @@ async def order(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text=f"Received order:\n{order_raw}"
         )
 
+        order_date = interp.get_date()
         # send order msg
-        formatted_text = f"{date.today() + timedelta(days=1)}\n"
+        formatted_text = f"{order_date}\n"
         formatted_text += "華仁\n\n"
         formatted_text += f"Total: $38x{t_order} = ${38 * t_order}\n\n"
         for i in f_order.keys():
@@ -95,7 +96,7 @@ async def order(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
         # generate checklist in Markdown format
-        check_text = f"{date.today() + timedelta(days=1)}\n\n"
+        check_text = f"{order_date}\n\n"
         check_text += f"Total: $38x{t_order} = ${38 * t_order}\n\n"
         for i in interp.order:
             check_text += f"[ ] {i}\n\n"

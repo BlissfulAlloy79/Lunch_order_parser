@@ -1,5 +1,4 @@
-# Lunch_order_interpreter
-你校的午餐订单解析器
+# Lunch_order_parser
 
 ---
 
@@ -33,6 +32,9 @@ Total: $38x[total set count] = $[total amount]
 #### For the schoolmates, they will compose up their order into the following format:
 
 ```markdown
+[yyyy-mm--dd] [weekday]
+
+[schoolmate info] [lunch set] + [drinks]
 [schoolmate info] [lunch set] + [drinks]
 ...
 ```

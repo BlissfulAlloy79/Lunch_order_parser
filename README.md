@@ -58,3 +58,5 @@ Fist time set up it will generate a `config.yml`, fill up the config and re-exec
 Since the I/O was based on a telegram bot, a tg bot token will also be required
 
 ~~.exe when?~~
+
+~~docker when?~~

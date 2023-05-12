@@ -4,9 +4,9 @@
 
 ## Scenario
 
-You are Chris Wong
+~~You are Chris Wong~~
 
-Since the spirit of your school is "We Are Man For and With Others", you are now in charged with helping the lunch order for your schoolmates
+~~Since the spirit of your school is "We Are Man For and With Others", you are now in charged with helping the lunch order for your schoolmates~~
 
 The restaurant you are ordering contains different lunch sets (A, B, C, D, E, F, G, J, K) and drinks are provided for free
 
@@ -56,6 +56,18 @@ Make sure the `main.py` and `order_parser.py` are in the same directory
 Fist time set up it will generate a `config.yml`, fill up the config and re-execute the `main.py`
 
 Since the I/O was based on a telegram bot, a tg bot token will also be required
+
+### telegram bot commands:
+
+~~check the `main.py` yourself la~~
+
+```
+/order [yyyy-mm--dd] [weekday]
+
+[schoolmate info] [lunch set] + [drinks]
+[schoolmate info] [lunch set] + [drinks]
+...
+```
 
 ~~.exe when?~~
 

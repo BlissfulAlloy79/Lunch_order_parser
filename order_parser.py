@@ -10,9 +10,11 @@ import re
 
 class OrderParse:
     def __init__(self, order):
-        self.raw = order.split('\n')
+        if type(order) is str:
+            self.raw = order.split('\n')
+        else:
+            self.raw = order
         self.order = self.raw[2:]
-        print(self.order)
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2} [A-Z][a-z]{2}", self.raw[0]):
             raise SyntaxError("Header format incorrect, cannot identify date")
         if self.raw[1] != "":

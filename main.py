@@ -15,7 +15,7 @@ from telegram.ext import (
 
 
 default_cfg = """\
-# place tg bot token
+# place telegram bot token
 tg_bot_token: ''
 
 # daily order template

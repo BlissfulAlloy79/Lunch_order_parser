@@ -1,2 +1,2 @@
-python-telegram-bot==20.3
-ruamel.base==1.0.0
+python-telegram-bot[job-queue]
+ruamel.yaml>=0.17.26

@@ -47,11 +47,15 @@ The script basically reads the '+' sign in each line of orders
 
 If the '+' sign can't be found, it will raise an exception
 
-## Setting up
+## Telegram bot setup
 
 Clone the repo into a file
 
+Make sure you hv python installed on the serving computer
+
 Make sure the `main.py` and `order_parser.py` are in the same directory
+
+In your file directory, execute `pip install -r requirements.txt`
 
 Fist time set up it will generate a `config.yml`, fill up the config and re-execute the `main.py`
 
@@ -69,6 +73,30 @@ Since the I/O was based on a telegram bot, a tg bot token will also be required
 ...
 ```
 
+---
+
 ~~.exe when?~~
+
+## Standalone console ui setup
+
+Clone the repo into a file
+
+execute `console.exe`
+
+### console input formats:
+
+```
+[yyyy-mm--dd] [weekday]
+
+[schoolmate info] [lunch set] + [drinks]
+[schoolmate info] [lunch set] + [drinks]
+...
+```
+
+alternatively, if you hv python configured as in telegram bot setup
+
+you can also choose to execute `console.py`
+
+---
 
 ~~docker when?~~
